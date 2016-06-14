@@ -21,7 +21,8 @@ const main = args => {
     .option('-v, --verbose', 'Outputs actions to console.')
     .option('-p, --type [port]', 'Port to listen on, defaults to 8080')
     .option('--host [host]', 'Hostname, defaults to localhost')
-    .option('-o, --output [path]', `specifies path for the log file. Defaults to ./phantom-monitor.log`);
+    .option('-o, --output [path]', `specifies path for the log file. Defaults to ./phantom-monitor.log`)
+    .option('--secure', 'Will fail on ssl errors')
     .parse(args);
 
   const port = prog.port || 8080;
